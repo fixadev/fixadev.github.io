@@ -3,70 +3,389 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Contact MassiveBrain AI support team for assistance"
+    <title>Massive Brain - AI Tutor in Your iPad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
     />
-    <title>Support Contact - MassiveBrain AI</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <style>
+      :root {
+        --gradient-start: #ff4b4b;
+        --gradient-middle: #4b7bff;
+        --gradient-end: #4bff91;
+        --text-color: #1c1c1e;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
       body {
-        font-family: Arial, sans-serif;
+        font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(
+          to top right,
+          #888,
+          #eee 40%,
+          #eee 80%,
+          #aaa
+        );
+        position: relative;
+        overflow: hidden;
+      }
+
+      .particle {
+        position: absolute;
+        border-radius: 50%;
+        animation: float-around 20s linear infinite;
+        opacity: 0.4;
+      }
+
+      .particle:nth-child(1) {
+        top: 15%;
+        left: 15%;
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(
+          45deg,
+          var(--gradient-start),
+          var(--gradient-middle)
+        );
+        animation-delay: 0s;
+      }
+      .particle:nth-child(2) {
+        top: 75%;
+        left: 25%;
+        width: 30px;
+        height: 30px;
+        background: linear-gradient(
+          135deg,
+          var(--gradient-middle),
+          var(--gradient-end)
+        );
+        animation-delay: -5s;
+      }
+      .particle:nth-child(3) {
+        top: 25%;
+        left: 65%;
+        width: 35px;
+        height: 35px;
+        background: linear-gradient(
+          225deg,
+          var(--gradient-start),
+          var(--gradient-end)
+        );
+        animation-delay: -10s;
+      }
+      .particle:nth-child(4) {
+        top: 85%;
+        left: 85%;
+        width: 25px;
+        height: 25px;
+        background: linear-gradient(
+          315deg,
+          var(--gradient-middle),
+          var(--gradient-start)
+        );
+        animation-delay: -15s;
+      }
+      .particle:nth-child(5) {
+        top: 45%;
+        left: 75%;
+        width: 45px;
+        height: 45px;
+        background: linear-gradient(
+          90deg,
+          var(--gradient-start),
+          var(--gradient-middle)
+        );
+        animation-delay: -7s;
+      }
+      .particle:nth-child(6) {
+        top: 35%;
+        left: 35%;
+        width: 30px;
+        height: 30px;
+        background: linear-gradient(
+          180deg,
+          var(--gradient-middle),
+          var(--gradient-end)
+        );
+        animation-delay: -12s;
+      }
+      .particle:nth-child(7) {
+        top: 65%;
+        left: 55%;
+        width: 35px;
+        height: 35px;
+        background: linear-gradient(
+          270deg,
+          var(--gradient-end),
+          var(--gradient-start)
+        );
+        animation-delay: -3s;
+      }
+      .particle:nth-child(8) {
+        top: 85%;
+        left: 15%;
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(
+          60deg,
+          var(--gradient-middle),
+          var(--gradient-end)
+        );
+        animation-delay: -8s;
+      }
+      .particle:nth-child(9) {
+        top: 20%;
+        left: 85%;
+        width: 38px;
+        height: 38px;
+        background: linear-gradient(
+          120deg,
+          var(--gradient-start),
+          var(--gradient-end)
+        );
+        animation-delay: -4s;
+      }
+      .particle:nth-child(10) {
+        top: 55%;
+        left: 10%;
+        width: 42px;
+        height: 42px;
+        background: linear-gradient(
+          200deg,
+          var(--gradient-middle),
+          var(--gradient-start)
+        );
+        animation-delay: -9s;
+      }
+      .particle:nth-child(11) {
+        top: 70%;
+        left: 40%;
+        width: 28px;
+        height: 28px;
+        background: linear-gradient(
+          300deg,
+          var(--gradient-end),
+          var(--gradient-middle)
+        );
+        animation-delay: -13s;
+      }
+      .particle:nth-child(12) {
+        top: 30%;
+        left: 90%;
+        width: 36px;
+        height: 36px;
+        background: linear-gradient(
+          150deg,
+          var(--gradient-start),
+          var(--gradient-middle)
+        );
+        animation-delay: -6s;
+      }
+
+      @keyframes float-around {
+        0% {
+          transform: translateX(0) translateY(0) rotate(0deg) scale(1);
+        }
+        25% {
+          transform: translateX(100px) translateY(-50px) rotate(90deg)
+            scale(1.2);
+        }
+        50% {
+          transform: translateX(0) translateY(-100px) rotate(180deg) scale(1);
+        }
+        75% {
+          transform: translateX(-100px) translateY(-50px) rotate(270deg)
+            scale(0.8);
+        }
+        100% {
+          transform: translateX(0) translateY(0) rotate(360deg) scale(1);
+        }
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 6rem 2rem;
+        position: relative;
+        z-index: 1;
+      }
+
+      .content {
         display: flex;
         flex-direction: column;
-        min-height: 100vh;
-        margin: 0;
-        background-color: #f5f5f5;
-      }
-      .main-content {
-        flex: 1;
-        display: flex;
-        justify-content: center;
         align-items: center;
-      }
-      .container {
         text-align: center;
-        padding: 20px;
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        margin: 20px;
+        animation: fadeInUp 1s ease-out;
       }
-      a {
-        color: #007bff;
-        text-decoration: none;
+
+      h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        line-height: 1.1;
+        background: linear-gradient(
+          165deg,
+          var(--gradient-start),
+          var(--gradient-middle),
+          var(--gradient-end)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: -0.02em;
       }
-      a:hover {
-        text-decoration: underline;
+
+      .description {
+        font-size: 1.35rem;
+        color: #666;
+        margin-bottom: 3rem;
+        max-width: 540px;
       }
-      footer {
+
+      .app-preview {
+        position: relative;
+        animation: float 6s ease-in-out infinite;
+        margin-bottom: 2rem;
+      }
+
+      .app-icon {
+        width: 180px;
+        height: 180px;
+        border-radius: 36px;
+        box-shadow: -8px 12px 32px rgba(0, 0, 0, 0.35);
+      }
+
+      .app-info {
         text-align: center;
-        padding: 20px;
-        font-size: 0.9em;
+        margin-bottom: 1rem;
+      }
+
+      .app-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+        color: var(--text-color);
+      }
+
+      .app-subtitle {
+        font-size: 1rem;
         color: #666;
       }
-      footer a {
-        margin: 0 10px;
+
+      .download-button {
+        display: block;
+        width: 200px;
+        transition: transform 0.2s ease;
+      }
+
+      .download-button:hover {
+        transform: translateY(-2px);
+      }
+
+      .download-button img {
+        width: 100%;
+        height: auto;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 4rem 1.5rem;
+        }
+
+        h1 {
+          font-size: 2.75rem;
+        }
+
+        .description {
+          font-size: 1.15rem;
+        }
+
+        .app-icon {
+          width: 140px;
+          height: 140px;
+          border-radius: 28px;
+        }
+
+        .particle {
+          display: none;
+        }
       }
     </style>
   </head>
   <body>
-    <div class="main-content">
-      <div class="container">
-        <h1>Contact Support</h1>
-        <p>
-          For support, please contact us at
-          <a
-            href="mailto:support@massivebrain.ai"
-            aria-label="Email support at support@massivebrain.ai"
-            >support@massivebrain.ai</a
-          >
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <main class="container">
+      <div class="content">
+        <h1>Meet your personal AI tutor.</h1>
+        <p class="description">
+          Massive Brain is the world's first AI tutor that sees, talks, and
+          writes
         </p>
+        <div class="app-preview">
+          <img
+            src="/assets/app_logo.png"
+            alt="Massive Brain App Icon"
+            class="app-icon"
+          />
+        </div>
+        <!-- <div class="app-info">
+          <div class="app-title">Massive Brain</div>
+        </div> -->
+        <a
+          target="_blank"
+          href="https://apple.co/43h0aub"
+          class="download-button"
+        >
+          <img
+            src="/assets/download_on_app_store_black.svg"
+            alt="Download on the App Store"
+          />
+        </a>
       </div>
-    </div>
-    <footer>
-      <a href="/privacy.html">Privacy Policy</a>
-      <a href="/terms.html">Terms of Service</a>
-    </footer>
+    </main>
   </body>
 </html>
