@@ -114,6 +114,7 @@
         left: 0;
         width: 100vw;
         height: 100vh;
+        z-index: -1;
       }
 
       .container {
@@ -162,14 +163,33 @@
       }
 
       .download-button {
+        position: relative;
         display: block;
-        width: 180px;
-        transition: transform 0.2s ease;
+        width: 240px;
+        transition: all 0.2s ease;
         margin-top: 0rem;
+        text-decoration: none;
+        padding: 16px 24px;
+        border-radius: 16px;
+        font-weight: 500;
+        font-size: 1.1rem;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 3px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      }
+
+      .download-button span {
+        position: relative;
+        z-index: 1;
+        color: white;
       }
 
       .download-button:hover {
-        transform: translateY(-2px);
+        background: rgba(255, 255, 255, 0.15);
+        border: 3px solid rgba(255, 255, 255, 0.3);
       }
 
       .download-button img {
@@ -226,12 +246,6 @@
           border-radius: 28px;
         }
 
-        /* .footer {
-          flex-direction: column;
-          gap: 1rem;
-          align-items: center;
-        } */
-
         .show-on-mobile {
           display: block;
         }
@@ -264,15 +278,12 @@
           />
           <a
             target="_blank"
-            href="https://apple.co/43h0aub"
+            href="https://forms.gle/E64mowQSRkgbGDrj6"
             class="download-button"
           >
-            <img
-              src="/assets/download_on_app_store_black.svg"
-              alt="Download on the App Store"
-            />
+            <span>join beta test.</span>
           </a>
-          <div class="caption">exclusively for ipad.</div>
+          <!-- <div class="caption">exclusively for ipad.</div> -->
         </div>
       </div>
       <div class="footer">
