@@ -1,9 +1,10 @@
 import Image from "next/image";
 import {
-  HoverCard,
-  HoverCardContent,
-  HoverCardTrigger,
-} from "@/components/ui/hover-card";
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+  TooltipProvider,
+} from "@/components/ui/mobile-tooltip";
 
 export default function Home() {
   return (
@@ -31,42 +32,66 @@ export default function Home() {
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
               Mimi can{" "}
-              <HoverCard>
-                <HoverCardTrigger className="underline decoration-dotted cursor-pointer">
-                  talk
-                </HoverCardTrigger>
-                <HoverCardContent>
-                  Mimi interacts with you via voice
-                </HoverCardContent>
-              </HoverCard>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger className="underline decoration-dotted cursor-pointer">
+                    talk
+                  </TooltipTrigger>
+                  <TooltipContent
+                    side="bottom"
+                    sideOffset={5}
+                    className="p-2 text-sm text-white bg-white/10 backdrop-blur-lg border border-white/20"
+                  >
+                    Mimi interacts with you via voice
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
               ,{" "}
-              <HoverCard>
-                <HoverCardTrigger className="underline decoration-dotted cursor-pointer">
-                  see
-                </HoverCardTrigger>
-                <HoverCardContent>
-                  Mimi sees what&apos;s on your screen to give personalized
-                  advice
-                </HoverCardContent>
-              </HoverCard>
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger className="underline decoration-dotted cursor-pointer">
+                    see
+                  </TooltipTrigger>
+                  <TooltipContent
+                    side="bottom"
+                    sideOffset={5}
+                    className="p-2 text-sm text-white bg-white/10 backdrop-blur-lg border border-white/20"
+                  >
+                    Mimi sees what&apos;s on your screen to give personalized
+                    advice
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
               ,{" "}
-              <HoverCard>
-                <HoverCardTrigger className="underline decoration-dotted cursor-pointer">
-                  write
-                </HoverCardTrigger>
-                <HoverCardContent>
-                  Mimi writes text and math equations directly to your screen
-                </HoverCardContent>
-              </HoverCard>{" "}
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger className="underline decoration-dotted cursor-pointer">
+                    write
+                  </TooltipTrigger>
+                  <TooltipContent
+                    side="bottom"
+                    sideOffset={5}
+                    className="p-2 text-sm text-white bg-white/10 backdrop-blur-lg border border-white/20"
+                  >
+                    Mimi writes text and math equations directly to your screen
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>{" "}
               and{" "}
-              <HoverCard>
-                <HoverCardTrigger className="underline decoration-dotted cursor-pointer">
-                  flirt
-                </HoverCardTrigger>
-                <HoverCardContent>
-                  Mimi spices up your learning with some flirty banter 😏
-                </HoverCardContent>
-              </HoverCard>{" "}
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger className="underline decoration-dotted cursor-pointer">
+                    flirt
+                  </TooltipTrigger>
+                  <TooltipContent
+                    side="bottom"
+                    sideOffset={5}
+                    className="p-2 text-sm text-white bg-white/10 backdrop-blur-lg border border-white/20"
+                  >
+                    Mimi spices up your learning with some flirty banter 😏
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>{" "}
               😏
             </p>
           </div>
