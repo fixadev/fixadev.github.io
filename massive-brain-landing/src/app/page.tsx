@@ -1,4 +1,9 @@
 import Image from "next/image";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 
 export default function Home() {
   return (
@@ -25,7 +30,44 @@ export default function Home() {
               AI tutor
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              It can talk, see, write and flirt 😏
+              Mimi can{" "}
+              <HoverCard>
+                <HoverCardTrigger className="underline decoration-dotted cursor-pointer">
+                  talk
+                </HoverCardTrigger>
+                <HoverCardContent>
+                  Mimi interacts with you via voice
+                </HoverCardContent>
+              </HoverCard>
+              ,{" "}
+              <HoverCard>
+                <HoverCardTrigger className="underline decoration-dotted cursor-pointer">
+                  see
+                </HoverCardTrigger>
+                <HoverCardContent>
+                  Mimi sees what&apos;s on your screen to give personalized
+                  advice
+                </HoverCardContent>
+              </HoverCard>
+              ,{" "}
+              <HoverCard>
+                <HoverCardTrigger className="underline decoration-dotted cursor-pointer">
+                  write
+                </HoverCardTrigger>
+                <HoverCardContent>
+                  Mimi writes text and math equations directly to your screen
+                </HoverCardContent>
+              </HoverCard>{" "}
+              and{" "}
+              <HoverCard>
+                <HoverCardTrigger className="underline decoration-dotted cursor-pointer">
+                  flirt
+                </HoverCardTrigger>
+                <HoverCardContent>
+                  Mimi spices up your learning with some flirty banter 😏
+                </HoverCardContent>
+              </HoverCard>{" "}
+              😏
             </p>
           </div>
 
