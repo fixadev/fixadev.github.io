@@ -58,7 +58,7 @@ export default function Home() {
             <a
               target="_blank"
               href="https://x.com/jonathanzliu/status/1895601693884367080"
-              className="relative w-[240px] transition-all mt-4 mb-3 no-underline px-6 py-4 rounded-2xl font-medium text-lg text-center bg-white/10 backdrop-blur-lg border-2 border-white/20 shadow-lg flex items-center justify-center gap-2.5 hover:bg-white/15 hover:border-white/30"
+              className="relative w-[240px] transition-all mt-3 mb-3 no-underline px-6 py-4 rounded-2xl font-medium text-lg text-center bg-white/10 backdrop-blur-lg border-2 border-white/20 shadow-lg flex items-center justify-center gap-2.5 hover:bg-white/15 hover:border-white/30"
             >
               <span>Watch video on</span>
               <svg
@@ -71,7 +71,7 @@ export default function Home() {
               </svg>
             </a>
 
-            <div className="text-sm opacity-90">exclusively for iPad.</div>
+            <div className="text-sm opacity-90 mb-8">exclusively for iPad.</div>
           </div>
         </div>
 
