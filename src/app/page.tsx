@@ -69,7 +69,7 @@ export default function Home() {
             <a
               target="_blank"
               href="https://apple.co/43h0aub"
-              className="block w-[240px] transition-opacity hover:opacity-80"
+              className="block w-[240px] transition-opacity hover:opacity-80 shadow-[0_8px_32px_rgba(0,0,0,0.1)]"
             >
               <Image
                 src="/assets/download_on_app_store_black.svg"

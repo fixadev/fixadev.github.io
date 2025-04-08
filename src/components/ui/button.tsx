@@ -17,7 +17,7 @@ export const Button: React.FC<ButtonProps> = ({
   className = "",
 }) => {
   const baseClasses =
-    "relative w-[240px] transition-all text-lg font-medium text-center rounded-2xl flex items-center justify-center";
+    "relative w-[240px] transition-all text-lg font-medium text-center rounded-2xl flex items-center justify-center shadow-[0_8px_32px_rgba(0,0,0,0.1)]";
 
   const variantClasses =
     variant === "light"
