@@ -1,11 +1,6 @@
 import Image from "next/image";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-  TooltipProvider,
-} from "@/components/ui/mobile-tooltip";
 import Link from "next/link";
+import { FeatureTooltip } from "@/components/ui/feature-tooltip";
 
 export default function Home() {
   return (
@@ -32,67 +27,26 @@ export default function Home() {
               AI tutor
             </h1>
             <p className="text-xl md:text-2xl opacity-90 mb-8">
-              Mimi can{" "}
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger className="underline decoration-dotted cursor-pointer">
-                    talk
-                  </TooltipTrigger>
-                  <TooltipContent
-                    side="bottom"
-                    sideOffset={5}
-                    className="p-2 text-sm text-white bg-white/10 backdrop-blur-lg border border-white/20"
-                  >
-                    Mimi interacts with you via voice
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
+              It can{" "}
+              <FeatureTooltip
+                word="talk"
+                description="Mimi interacts with you conversationally via voice"
+              />
               ,{" "}
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger className="underline decoration-dotted cursor-pointer">
-                    see
-                  </TooltipTrigger>
-                  <TooltipContent
-                    side="bottom"
-                    sideOffset={5}
-                    className="p-2 text-sm text-white bg-white/10 backdrop-blur-lg border border-white/20"
-                  >
-                    Mimi sees what&apos;s on your screen to give personalized
-                    advice
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
+              <FeatureTooltip
+                word="see"
+                description="Mimi sees what's on your screen and responds based on what you're doing"
+              />
               ,{" "}
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger className="underline decoration-dotted cursor-pointer">
-                    write
-                  </TooltipTrigger>
-                  <TooltipContent
-                    side="bottom"
-                    sideOffset={5}
-                    className="p-2 text-sm text-white bg-white/10 backdrop-blur-lg border border-white/20"
-                  >
-                    Mimi writes text and math equations directly to your screen
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>{" "}
+              <FeatureTooltip
+                word="write"
+                description="Mimi writes text and math equations directly to your screen"
+              />{" "}
               and{" "}
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger className="underline decoration-dotted cursor-pointer">
-                    flirt
-                  </TooltipTrigger>
-                  <TooltipContent
-                    side="bottom"
-                    sideOffset={5}
-                    className="p-2 text-sm text-white bg-white/10 backdrop-blur-lg border border-white/20"
-                  >
-                    Mimi spices up your learning with some flirty banter 😏
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>{" "}
+              <FeatureTooltip
+                word="flirt"
+                description="Mimi spices up your learning with some flirty banter 😏"
+              />{" "}
               😏
             </p>
           </div>
