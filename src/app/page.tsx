@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FeatureTooltip } from "@/components/ui/feature-tooltip";
 import { UrlNotifier } from "@/components/url-notifier";
+import { DownloadButton } from "@/components/ui/download-button";
 
 export default function Home() {
   return (
@@ -78,10 +79,9 @@ export default function Home() {
               />
             </a>
 
-            <a
-              target="_blank"
+            <DownloadButton
               href="https://x.com/jonathanzliu/status/1895601693884367080"
-              className="relative w-[240px] transition-all mt-3 mb-3 no-underline px-6 py-4 rounded-2xl font-medium text-lg text-center bg-white/10 backdrop-blur-lg border-2 border-white/20 shadow-lg flex items-center justify-center gap-2.5 hover:bg-white/15 hover:border-white/30"
+              className="my-2"
             >
               <span>Watch video on</span>
               <svg
@@ -92,7 +92,7 @@ export default function Home() {
               >
                 <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
               </svg>
-            </a>
+            </DownloadButton>
 
             <div className="text-sm opacity-90 mb-8">exclusively for iPad.</div>
           </div>
