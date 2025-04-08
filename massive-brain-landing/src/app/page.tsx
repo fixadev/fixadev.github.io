@@ -2,13 +2,25 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center relative overflow-y-auto bg-gradient-to-br from-[#eb5765] via-[#5a70dc] to-[#27b246]">
-      <div className="absolute inset-0 bg-[url('/assets/noise.png')] opacity-20" />
+    <div
+      className="min-h-screen flex flex-col items-center justify-center relative overflow-y-auto"
+      style={{
+        background:
+          "linear-gradient(135deg, #eb5765 -3%, #5a70dc 50%, #27b246 103%)",
+      }}
+    >
+      <div
+        className="absolute inset-0 w-full h-full"
+        style={{
+          backgroundImage: "url(/assets/noise.png)",
+          backgroundRepeat: "repeat",
+        }}
+      />
 
-      <main className="relative max-w-[1000px] mx-auto px-4 pt-20 flex flex-col justify-between min-h-screen">
+      <main className="relative max-w-[1000px] mx-auto px-4 pt-20 flex flex-col justify-between min-h-screen text-white">
         <div className="flex flex-col items-center gap-6 flex-1 justify-center">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-semibold leading-tight mb-4 text-white">
+            <h1 className="text-4xl md:text-5xl font-semibold leading-tight mb-4">
               Meet your personal <br className="md:hidden" />
               AI tutor
             </h1>
@@ -63,21 +75,21 @@ export default function Home() {
           <a
             target="_blank"
             href="/privacy.html"
-            className="text-white opacity-80 hover:opacity-100 text-sm transition-opacity"
+            className="font-medium opacity-80 hover:opacity-100 text-sm transition-opacity"
           >
             Privacy
           </a>
           <a
             target="_blank"
             href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
-            className="text-white opacity-80 hover:opacity-100 text-sm transition-opacity"
+            className="font-medium opacity-80 hover:opacity-100 text-sm transition-opacity"
           >
             Terms
           </a>
           <a
             target="_blank"
             href="https://forms.gle/wZkzNN8s5NPmgavM6"
-            className="text-white opacity-80 hover:opacity-100 text-sm transition-opacity"
+            className="font-medium opacity-80 hover:opacity-100 text-sm transition-opacity"
           >
             Support
           </a>
