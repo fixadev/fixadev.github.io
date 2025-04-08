@@ -10,12 +10,13 @@ const config: Config = {
     extend: {
       keyframes: {
         float: {
-          "0%, 100%": { transform: "translateY(0)" },
+          "0%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-20px)" },
+          "100%": { transform: "translateY(0px)" },
         },
       },
       animation: {
-        float: "float 6s ease-in-out infinite",
+        float: "float 3s ease-in-out infinite",
       },
     },
   },

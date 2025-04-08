@@ -17,10 +17,10 @@ export default function Home() {
         }}
       />
 
-      <main className="relative max-w-[1000px] mx-auto px-4 pt-20 flex flex-col justify-between min-h-screen text-white">
+      <main className="relative max-w-[1000px] mx-auto px-4 pt-12 md:pt-20 flex flex-col justify-between min-h-screen text-white">
         <div className="flex flex-col items-center gap-6 flex-1 justify-center">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-semibold leading-tight mb-4">
+            <h1 className="text-3xl md:text-5xl font-semibold leading-tight mb-4">
               Meet your personal <br className="md:hidden" />
               AI tutor
             </h1>
@@ -35,7 +35,11 @@ export default function Home() {
               alt="Massive Brain App Icon"
               width={180}
               height={180}
-              className="rounded-[36px] my-8 shadow-lg animate-float"
+              className="w-[140px] h-[140px] md:w-[180px] md:h-[180px] rounded-[28px] md:rounded-[36px] my-8 shadow-lg"
+              style={{
+                animation: "float 6s ease-in-out infinite",
+                boxShadow: "0 8px 24px rgba(0, 0, 0, 0.2)",
+              }}
             />
 
             <a
