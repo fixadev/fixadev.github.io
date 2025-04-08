@@ -99,7 +99,7 @@ export default function Home() {
         <div className="flex gap-8 justify-center py-6">
           <a
             target="_blank"
-            href="/privacy.html"
+            href="/privacy"
             className="font-medium opacity-80 hover:opacity-100 text-sm transition-opacity"
           >
             Privacy
