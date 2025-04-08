@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { FeatureTooltip } from "@/components/ui/feature-tooltip";
 import { UrlNotifier } from "@/components/url-notifier";
-import { DownloadButton } from "@/components/ui/download-button";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
@@ -79,7 +79,7 @@ export default function Home() {
               />
             </a>
 
-            <DownloadButton
+            <Button
               href="https://x.com/jonathanzliu/status/1895601693884367080"
               className="my-2"
             >
@@ -92,7 +92,7 @@ export default function Home() {
               >
                 <path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
               </svg>
-            </DownloadButton>
+            </Button>
 
             <div className="text-sm opacity-90 mb-8">exclusively for iPad.</div>
           </div>

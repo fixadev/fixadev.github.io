@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-interface DownloadButtonProps {
+interface ButtonProps {
   variant?: "light" | "dark";
   href: string;
   children: React.ReactNode;
@@ -9,7 +9,7 @@ interface DownloadButtonProps {
   className?: string;
 }
 
-export const DownloadButton: React.FC<DownloadButtonProps> = ({
+export const Button: React.FC<ButtonProps> = ({
   variant = "light",
   href,
   children,
@@ -34,24 +34,6 @@ export const DownloadButton: React.FC<DownloadButtonProps> = ({
         {children}
         {icon}
       </span>
-    </a>
-  );
-};
-
-// Specialized component for App Store download button
-export const AppStoreButton: React.FC<{ href: string }> = ({ href }) => {
-  return (
-    <a
-      target="_blank"
-      href={href}
-      className="block w-[240px] transition-opacity hover:opacity-80"
-    >
-      <Image
-        src="/assets/download_on_app_store_black.svg"
-        alt="Download on the App Store"
-        width={240}
-        height={80}
-      />
     </a>
   );
 };
