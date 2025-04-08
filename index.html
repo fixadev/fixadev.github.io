@@ -162,9 +162,24 @@
         animation: float 6s ease-in-out infinite;
       }
 
+      .apple-download-button {
+        display: block;
+        width: 240px;
+        transition: opacity 0.2s ease;
+        margin-top: 0rem;
+      }
+
+      .apple-download-button:hover {
+        opacity: 0.8;
+      }
+
+      .apple-download-button img {
+        width: 100%;
+        height: auto;
+      }
+
       .download-button {
         position: relative;
-        display: block;
         width: 240px;
         transition: all 0.2s ease;
         margin-top: 0rem;
@@ -177,8 +192,12 @@
         background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(12px);
         -webkit-backdrop-filter: blur(12px);
-        border: 3px solid rgba(255, 255, 255, 0.2);
+        border: 2px solid rgba(255, 255, 255, 0.2);
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
       }
 
       .download-button span {
@@ -189,7 +208,7 @@
 
       .download-button:hover {
         background: rgba(255, 255, 255, 0.15);
-        border: 3px solid rgba(255, 255, 255, 0.3);
+        border: 2px solid rgba(255, 255, 255, 0.3);
       }
 
       .download-button img {
@@ -263,16 +282,12 @@
 
       .download-button.dark {
         background: rgba(0, 0, 0, 0.9);
-        border: 3px solid rgba(50, 50, 50, 1);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
+        border: 2px solid rgba(50, 50, 50, 1);
       }
 
       .download-button.dark:hover {
         background: rgba(0, 0, 0, 0.7);
-        border: 3px solid rgba(70, 70, 70, 1);
+        border: 2px solid rgba(70, 70, 70, 1);
       }
     </style>
   </head>
@@ -281,8 +296,8 @@
     <main class="container">
       <div class="content">
         <div>
-          <h1>meet your personal <br class="show-on-mobile" />AI tutor.</h1>
-          <p class="description">it can talk, see, and write.</p>
+          <h1>Meet your personal <br class="show-on-mobile" />AI tutor</h1>
+          <p class="description">It can talk, see, write and flirt 😏</p>
         </div>
         <div>
           <img
@@ -290,20 +305,44 @@
             alt="Massive Brain App Icon"
             class="app-icon"
           />
+          <!-- <a
+            target="_blank"
+            href="https://apps.apple.com/app/massive-brain/id6479992019"
+            style="
+              display: block;
+              background: none;
+              border: none;
+              box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+              padding: 0;
+              transition: opacity 0.2s ease;
+              line-height: 0;
+            "
+            onmouseover="this.style.opacity='0.8'"
+            onmouseout="this.style.opacity='1'"
+          >
+            <img
+              src="/assets/download_on_app_store_black.svg"
+              alt="Download on App Store"
+              style="width: 240px; display: block"
+            />
+          </a> -->
           <a
             target="_blank"
-            href="https://forms.gle/E64mowQSRkgbGDrj6"
-            class="download-button"
+            href="https://apple.co/43h0aub"
+            class="apple-download-button"
           >
-            <span>join beta test.</span>
+            <img
+              src="/assets/download_on_app_store_black.svg"
+              alt="Download on the App Store"
+            />
           </a>
           <a
             target="_blank"
             href="https://x.com/jonathanzliu/status/1895601693884367080"
-            class="download-button dark"
-            style="margin-top: 12px"
+            class="download-button"
+            style="margin-bottom: 12px"
           >
-            <span>watch video on</span>
+            <span>Watch video on</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
@@ -316,18 +355,25 @@
               />
             </svg>
           </a>
-          <!-- <div class="caption">exclusively for ipad.</div> -->
+          <div class="caption">exclusively for iPad.</div>
+          <!-- <a
+            target="_blank"
+            href="https://forms.gle/E64mowQSRkgbGDrj6"
+            class="download-button"
+          >
+            <span>join beta test.</span>
+          </a> -->
         </div>
       </div>
       <div class="footer">
-        <a target="_blank" href="/privacy.html">privacy</a>
+        <a target="_blank" href="/privacy.html">Privacy</a>
         <a
           target="_blank"
           href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
-          >terms</a
+          >Terms</a
         >
         <a target="_blank" href="https://forms.gle/wZkzNN8s5NPmgavM6"
-          >support</a
+          >Support</a
         >
       </div>
     </main>
