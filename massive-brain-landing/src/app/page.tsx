@@ -5,6 +5,7 @@ import {
   TooltipTrigger,
   TooltipProvider,
 } from "@/components/ui/mobile-tooltip";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -143,13 +144,13 @@ export default function Home() {
         </div>
 
         <div className="flex gap-8 justify-center py-6">
-          <a
+          <Link
             target="_blank"
-            href="/privacy.html"
+            href="/privacy"
             className="font-medium opacity-80 hover:opacity-100 text-sm transition-opacity"
           >
             Privacy
-          </a>
+          </Link>
           <a
             target="_blank"
             href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
