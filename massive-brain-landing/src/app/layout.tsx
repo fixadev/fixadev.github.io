@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans } from "next/font/google";
+import { PostHogProvider } from "./providers";
 import "./globals.css";
 
 const ibmPlexSans = IBM_Plex_Sans({
@@ -29,7 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${ibmPlexSans.className} antialiased`}>{children}</body>
+      <body className={`${ibmPlexSans.className} antialiased`}>
+        <PostHogProvider>{children}</PostHogProvider>
+      </body>
     </html>
   );
 }
