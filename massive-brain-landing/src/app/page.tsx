@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FeatureTooltip } from "@/components/ui/feature-tooltip";
+import { UrlNotifier } from "@/components/url-notifier";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
           "linear-gradient(135deg, #eb5765 -3%, #5a70dc 50%, #27b246 103%)",
       }}
     >
+      <UrlNotifier />
       <div
         className="absolute inset-0 w-full h-full"
         style={{
