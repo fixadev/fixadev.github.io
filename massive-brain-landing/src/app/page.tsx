@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { FeatureTooltip } from "@/components/ui/feature-tooltip";
 
 export default function Home() {
@@ -98,13 +97,13 @@ export default function Home() {
         </div>
 
         <div className="flex gap-8 justify-center py-6">
-          <Link
+          <a
             target="_blank"
-            href="/privacy"
+            href="/privacy.html"
             className="font-medium opacity-80 hover:opacity-100 text-sm transition-opacity"
           >
             Privacy
-          </Link>
+          </a>
           <a
             target="_blank"
             href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"

@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     icon: "/assets/favicon.ico",
     apple: "/assets/favicon.ico",
   },
+  metadataBase: new URL("https://massivebrain.ai"),
 };
 
 export default function RootLayout({
