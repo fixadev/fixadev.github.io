@@ -3,7 +3,7 @@ import { FeatureTooltip } from "@/components/ui/feature-tooltip";
 import { UrlNotifier } from "@/components/url-notifier";
 import { Button } from "@/components/ui/button";
 
-const betaTesting = true;
+const betaTesting = false;
 export default function Home() {
   return (
     <div
