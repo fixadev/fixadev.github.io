@@ -9,11 +9,15 @@ interface InsightData {
   result: unknown[];
 }
 
-export async function GET() {
+export async function GET(request: Request) {
   const projectId = "128584";
   const insightId = "2611349";
   const apiKey = process.env.POSTHOG_PERSONAL_API_KEY;
   const analyticsScriptUrl = process.env.ANALYTICS_SCRIPT_URL;
+
+  // Parse the refresh query parameter
+  const url = new URL(request.url);
+  const refresh = url.searchParams.get("refresh") === "true";
 
   if (!apiKey) {
     return NextResponse.json(
@@ -23,10 +27,12 @@ export async function GET() {
   }
 
   try {
-    const url = `https://us.posthog.com/api/projects/${projectId}/insights/${insightId}`;
-    // const url = `https://us.posthog.com/api/projects/${projectId}/insights`;
-    // console.log("Fetching from:", url);
-    const response = await fetch(url, {
+    let posthogUrl = `https://us.posthog.com/api/projects/${projectId}/insights/${insightId}`;
+    if (refresh) {
+      posthogUrl += "?refresh=async";
+    }
+
+    const response = await fetch(posthogUrl, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${apiKey}`,
@@ -44,7 +50,7 @@ export async function GET() {
     console.log("last refresh", lastRefresh);
 
     // Send data to analytics script
-    if (analyticsScriptUrl) {
+    if (!refresh && analyticsScriptUrl) {
       const formData = new FormData();
       formData.append("num", num.toString());
       formData.append("last_refresh", lastRefresh);
